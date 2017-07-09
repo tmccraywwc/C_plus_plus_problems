@@ -1,0 +1,25 @@
+/* Problem_5_chap_2_CS_text: Negotiating a consumer discount installment loan. Input: amount consumer needs to borrow,
+the interest rate, and the duration of loan (in months). Output: calculated monthly payment owed by the consumer. The sample code 
+includes interest rate of 15 percent over 18 month (1.5 year) duration */
+
+# include <iostream>
+using namespace std;
+int main ( )
+{
+	double amount_requested, interest_rate, face_value, duration;
+  char ans;
+	{ do
+  cout<<"Enter the amount requested: ";
+	cin>>amount_requested;
+	cout<<"Enter the interest rate: ";
+	cin>>interest_rate;
+	cout<<"Enter the duration in years: ";
+	cin>>duration;
+	face_value=(amount_requested)/(1-(interest_rate*duration));
+	cout<<"The face value of the loan is: "<<face_value<<" dollars";
+  cout<<"Would you like to repeat: ";
+  cin>>ans;
+  }while (ans=='Y'||ans=='y');
+  return 0;	
+}
+
