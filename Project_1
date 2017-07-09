@@ -7,9 +7,10 @@ using namespace std;
 int main ( )
 {
 	double amount_requested, interest_rate, face_value, duration;
-  char ans;
-	{ do
-  cout<<"Enter the amount requested: ";
+  	char ans;
+	do
+  	{ 
+	cout<<"Enter the amount requested: ";
 	cin>>amount_requested;
 	cout<<"Enter the interest rate: ";
 	cin>>interest_rate;
@@ -17,9 +18,9 @@ int main ( )
 	cin>>duration;
 	face_value=(amount_requested)/(1-(interest_rate*duration));
 	cout<<"The face value of the loan is: "<<face_value<<" dollars";
-  cout<<"Would you like to repeat: ";
-  cin>>ans;
-  }while (ans=='Y'||ans=='y');
+  	cout<<"Would you like to repeat: ";
+  	cin>>ans;
+ 	 }while (ans=='Y'||ans=='y');
   return 0;	
 }
 
