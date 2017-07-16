@@ -1,0 +1,29 @@
+/* Sample program to calculate the number of months it will take to pay off an initial loan of $1000 at an interest rate of 18% per year 
+and monthly payments of $50. Additionally, the program will calculate the total amount of interest paid over the life of the loan. 2_9*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	
+	double interest_rate, interest, balance;
+	const int month_payment=50; 
+	int months=0, sum=0; 
+	cout<<"Enter the beginning balance: ";
+	cin>>balance;
+	cout<<"Enter the interest rate: ";
+	cin>>interest_rate;
+	cout<<endl;
+	
+	while (balance>=0)
+		{
+		interest=interest_rate * balance;
+		balance=(balance + interest) - month_payment;
+		months++;
+		sum=sum+interest;
+		}
+		cout<<"It will take you "<<months<< " months to pay off your balance\n"; 
+		cout<<"And the total interest paid is: " <<sum<<" dollars";
+		return 0;
+}
